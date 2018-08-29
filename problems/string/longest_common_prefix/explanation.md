@@ -2,7 +2,7 @@
 
 ### High level idea
 
-Pick the first word to iterate through and keep taking a substring from the beginning of it, checking that substring against all of the other words in the array. Only if _all_ of the words in the string have a prefix that matches that substring should the loop continue. Otherwise, there is no longer a common prefix and the longest prefix found so far can be returned.
+Pick the first word to iterate through and keep taking a substring from the beginning of it, checking that substring against all of the other words in the array. Only if _all_ of the words in the string have a prefix that matches that substring should the loop continue. Otherwise, there is no longer a common prefix so the loop can stop checking further prefixes to return the longest prefix found so far.
 
 ### Time and space complexity
 
@@ -14,9 +14,9 @@ Let: <br>
 Worst cases: <br>
 
 - Time: `O(n * m)` <br>
-- Space: `O(m)`
+- Space: `O(1)`
 
-The worst case happens when all of the strings in the array are substrings of each other: they are all the same word. In this case, the algorithm would iterate through the _entire_ word checking every single prefix substring against _every_ other string in the array. Since every word is the same, both loops would continue until the very end and not terminate early. Note that `n` and `m` are unrelated and therefore cannot be simplified. An example of a worst case is `["flower", "flower", "flower"]`. The space complexity is due to the final result would be the entire word.
+The worst case happens when all of the strings in the array are substrings of each other: they are all the same word. In this case, the algorithm would iterate through the _entire_ word checking every single prefix substring against _every_ other string in the array. Since every word is the same, both loops would continue until the very end and not terminate early. Note that `n` and `m` are unrelated and therefore cannot be simplified. An example of a worst case is `["flower", "flower", "flower"]`. The space complexity is constant since there is no new allocation of memory relative to the input.
 
 ### Edge cases missed
 
