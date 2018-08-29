@@ -9,7 +9,7 @@ Pick the first word to iterate through and keep taking a substring from the begi
 Let: <br>
 
 - `n` be the size of the input array <br>
-- `m` be the size of one of the strings in the array
+- `m` be the size of the shortest string in the array
 
 Worst cases: <br>
 
