@@ -12,6 +12,8 @@ def number_is_palindrome?(num)
 
   return revNum === num || revNum/10 === num
 end
+
+# if we did not have the limitation converting the number to a string and back is just as, if not faster in ruby
 ```
 
 ```js
