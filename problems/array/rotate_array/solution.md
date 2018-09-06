@@ -9,7 +9,8 @@ end
 
 ```js
 var rotate = function(nums, k) {
-  const last = nums.splice(nums.length - k, k);
+  k %= nums.length;
+  const last = nums.splice(-k);
   nums.splice(0, 0, ...last);
 };
 
