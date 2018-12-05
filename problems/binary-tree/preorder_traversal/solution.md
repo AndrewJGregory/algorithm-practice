@@ -59,7 +59,3 @@ var preorderTraversal = function(root) {
   return vals;
 };
 ```
-
-```
-
-```
